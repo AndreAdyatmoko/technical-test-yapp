@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import styles from "./custom.module.css";
 import { ButtonPrimary } from "./component/button/Button";
 import { loginUser } from "./API/api";
+import Link from "next/link";
 
 function Home() {
   const [identifier, setIndentifier] = useState("");
@@ -41,9 +42,11 @@ function Home() {
         <div className="text-center px-10 py-10">
           <p className={`${styles.textColor} text-white`}>
             No account?{" "}
-            <span className={`${styles.textColor} text-yellow-300 underline`}>
-              Register here
-            </span>
+            <Link href="/register">
+              <span className={`${styles.textColor} text-yellow-300 underline`}>
+                Register here
+              </span>
+            </Link>
           </p>
         </div>
       </div>

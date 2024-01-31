@@ -12,3 +12,16 @@ export const loginUser = async (identifier, password) => {
     throw error;
   }
 };
+
+export const registerUser  = async (email, username, password) => {
+  try {
+    const response = await axios.post("https://techtest.youapp.ai/api/register", {
+      email: email,
+      username: username,
+      password: password,
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
