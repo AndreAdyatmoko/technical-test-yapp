@@ -1,0 +1,36 @@
+.customBg {
+  background: radial-gradient(
+    124.23% 171.99% at 100% -3.39%,
+    #1f4247 0%,
+    #0d1d23 56.18%,
+    #09141a 100%
+  );
+}
+
+.bgBorder {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.buttonBg {
+  border-radius: 8px;
+  background: linear-gradient(108deg, #62CDCB 24.88%, #4599DB 78.49%);
+  transition: background-color 0.3s ease; /* Animasi transisi */
+}
+.buttonBg:hover {
+  background: linear-gradient(rgba(98, 205, 203, 1), rgba(69, 153, 219, 1));
+}
+
+.golden {
+  --Golden: linear-gradient(74deg, #94783E -6.8%, #F3EDA6 16.76%, #F8FAE5 30.5%, #FFE2BE 49.6%, #D5BE88 78.56%, #F8FAE5 89.01%, #D5BE88 100.43%);
+}
+
+/* Terapkan variabel Golden pada warna teks */
+.textColor {
+  color: var(--Golden);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
