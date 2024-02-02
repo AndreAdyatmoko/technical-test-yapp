@@ -12,7 +12,9 @@ function Home() {
   const handleLogin = async () => {
     try {
       const data = await loginUser(identifier, password);
-      console.log("Login Response", data);
+      const token = data.access_token
+      localStorage.setItem("token", token);
+      console.log("Login Response", data.access_token);
       window.location.href = "/login";
     } catch (error) {
       console.error("Login Error", error);

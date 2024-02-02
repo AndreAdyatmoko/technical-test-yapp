@@ -25,3 +25,18 @@ export const registerUser  = async (email, username, password) => {
     throw error;
   }
 }
+
+export const getProfile = async () => {
+  try {
+    const token = localStorage.getItem("token")
+    const response = await axios.get("https://techtest.youapp.ai/api/getProfile", {
+      headers: {
+        "x-access-token": token,
+      },
+    });
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
