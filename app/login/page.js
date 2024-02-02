@@ -21,9 +21,9 @@ function Login() {
         <span className="text-white font-bold">@johndoe123,</span>
         <EditIcon />
       </div>
-      <div className={`${style.bgThird} w-full min-h-36 rounded-2xl mt-6`}>
-        <span>About</span>
-        <span className="text-white font-bold">Lorem ipsum dolor sit amet</span>
+      <div className={`${style.bgThird} w-full min-h-36 rounded-2xl mt-6 px-4 py-4`}>
+        <span className="justify-between flex font-extrabold">About <EditIcon /></span>
+        <p className="py-14">Add in your your to help others know you better</p>
       </div>
       <div
         className={`${style.bgThird} w-full min-h-36 rounded-2xl mt-6`}

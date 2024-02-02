@@ -13,7 +13,6 @@ function Home() {
     try {
       const data = await loginUser(identifier, password);
       console.log("Login Response", data);
-      // Redirect to /login if login is successful
       window.location.href = "/login";
     } catch (error) {
       console.error("Login Error", error);
