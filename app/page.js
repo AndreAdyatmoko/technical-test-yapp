@@ -6,13 +6,15 @@ import { loginUser } from "./API/api";
 import Link from "next/link";
 
 function Home() {
-  const [identifier, setIndentifier] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
     try {
       const data = await loginUser(identifier, password);
       console.log("Login Response", data);
+      // Redirect to /login if login is successful
+      window.location.href = "/login";
     } catch (error) {
       console.error("Login Error", error);
     }
@@ -29,7 +31,7 @@ function Home() {
           type="text"
           placeholder="Enter Username/Email"
           value={identifier}
-          onChange={(e) => setIndentifier(e.target.value)}
+          onChange={(e) => setIdentifier(e.target.value)}
         />
         <input
           className={`${styles.bgBorder} rounded-md w-full py-4 px-4 mt-4`}
@@ -40,12 +42,10 @@ function Home() {
         />
         <ButtonPrimary text="Login" className="mt-4" onClick={handleLogin} />
         <div className="text-center px-10 py-10">
-          <p className={`${styles.textColor} text-white`}>
+          <p className="text-white">
             No account?{" "}
             <Link href="/register">
-              <span className={`${styles.textColor} text-yellow-300 underline`}>
-                Register here
-              </span>
+              <span className={`${styles.golden}`}>Register here</span>
             </Link>
           </p>
         </div>

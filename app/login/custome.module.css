@@ -1,0 +1,15 @@
+.bgPrime {
+    background: rgba(9, 20, 26, 1);
+}
+
+.bgSecond {
+    background: rgba(22, 35, 41, 1);
+}
+
+.bgThird {
+    background: rgba(14, 25, 31, 1)
+}
+
+.textColor {
+    color: rgba(255, 255, 255, 1);
+}

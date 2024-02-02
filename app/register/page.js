@@ -48,7 +48,7 @@ function Register() {
           <p className={`${styles.textColor} text-white`}>
             Have an account?{" "}
             <Link href="/">
-            <span className={`${styles.textColor} text-yellow-300 underline`}>
+            <span className={`${styles.textColor} underline`}>
               Login here
             </span>
             </Link>
