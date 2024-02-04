@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./custom.module.css";
-import { ButtonPrimary } from "./component/button/Button";
+import { ButtonGold, ButtonPrimary } from "./component/button/Button";
 import { loginUser } from "./API/api";
 import Link from "next/link";
 
@@ -46,7 +46,7 @@ function Home() {
           <p className="text-white">
             No account?{" "}
             <Link href="/register">
-              <span className={`${styles.golden}`}>Register here</span>
+              <ButtonGold text="Register" />
             </Link>
           </p>
         </div>

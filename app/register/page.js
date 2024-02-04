@@ -1,7 +1,7 @@
 "use client";
 import { registerUser } from "@/app/API/api";
 import styles from "../custom.module.css";
-import { ButtonPrimary } from "../component/button/Button";
+import { ButtonGold, ButtonPrimary } from "../component/button/Button";
 import Link from "next/link";
 
 function Register() {
@@ -48,9 +48,7 @@ function Register() {
           <p className={`${styles.textColor} text-white`}>
             Have an account?{" "}
             <Link href="/">
-            <span className={`${styles.textColor} underline`}>
-              Login here
-            </span>
+            <ButtonGold text="Login" />
             </Link>
           </p>
         </div>

@@ -12,3 +12,13 @@ export const ButtonPrimary = ({ text, onClick, className }) => {
   );
 };
 
+export const ButtonGold = ({ text, onClick, className }) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`${styles.textGold} font-bold ${className}`}
+    >
+      {text}
+    </button>
+  );
+};
